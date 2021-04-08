@@ -51,13 +51,20 @@ def checkYear(year):
         return False
         
 def main():
+    repeat=True
     print('This program validates a date')
-    date= input('Enter your date in a dd/mm/yyyy format: ')
-    dateArray= date.split('/')
-    yearVal=checkYear(dateArray[2])
-    monthVal=checkMonth(dateArray[1])
-    if yearVal and monthVal:
-        if checkDay(dateArray[0],dateArray[1],dateArray[2]):
-            print('The date',date,'is correct!')
-        
+    while repeat:
+        date= input('Enter your date in a dd/mm/yyyy format: ')
+        dateArray= date.split('/')
+        yearVal=checkYear(dateArray[2])
+        monthVal=checkMonth(dateArray[1])
+        if yearVal and monthVal:
+            if checkDay(dateArray[0],dateArray[1],dateArray[2]):
+                print('The date',date,'is correct!')
+                repeat= False
+            else:
+                print('Please try again!')
+        else:
+            print('Please try again!')
+                
 main()
