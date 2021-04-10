@@ -1,4 +1,4 @@
-# dateValidator.py
+#  dateValidator.py
 #   This program receives a date in a dd/mm/yyyy format and checks if it's correct
 
 from calendar import monthrange
