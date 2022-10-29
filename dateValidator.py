@@ -12,7 +12,7 @@ def isInt(inputString):
     
 def checkDay(day,month,year):
     if isInt(day):
-        day=int(day)
+        day=int(day) # Convert the day to an integer
         if isInt(month) and isInt(year):
             month=int(month)
             year=int(year)
