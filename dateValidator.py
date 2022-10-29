@@ -15,7 +15,7 @@ def checkDay(day,month,year):
         day=int(day) # Convert the day to an integer
         if isInt(month) and isInt(year):
             month=int(month)
-            year=int(year)
+            year=int(year) # Convert the month and year to integers
             daysInMonth=int(monthrange(year,month)[1])
             if 1<=day<=daysInMonth:
                 return True
